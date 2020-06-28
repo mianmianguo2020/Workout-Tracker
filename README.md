@@ -1,7 +1,5 @@
 # Workout-Tracker
 
-[![Workout-Tracker]
-
 
 ## Installation
 
