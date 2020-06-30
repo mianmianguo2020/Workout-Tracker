@@ -1,23 +1,14 @@
-const express = require("express");
-const mongoose = require("mongoose");
-
-const PORT = process.env.PORT || 3000
+const express = require('express');
+// require('./seeders/seed');
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
-app.use(express.static("public"));
+require('./routes/routes.js')(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
-
-// routes
-app.use(require("./routes/api.js"));
-
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
-});
+app.listen(3000, () => {
+    console.log('App listening on port: ' + 3000);
+})
