@@ -6,9 +6,9 @@ require('dotenv').config();
 
 module.exports = function(app) {
 
-    var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/workout";
+    var MONGOD_URI= process.env.MONGODB_URI || "mongodb://localhost/workout";
     
-    mongoose.connect(MONGODB_URI, {useNewUrlParser: true,useFindAndModify: false});
+    mongoose.connect(MONGOD_URI, {useNewUrlParser: true,useFindAndModify: false});
 
     app.get('/api/workouts', function (req, res) {
         console.log('get /api/workouts');

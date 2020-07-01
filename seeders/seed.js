@@ -3,9 +3,9 @@ let db = require("../models");
 require('dotenv').config();
 
 
-var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/workout";
+var MONGOD_URI= process.env.MONGODB_URI || "mongodb://localhost/workout";
     
-mongoose.connect(MONGODB_URI, {useNewUrlParser: true,useFindAndModify: false});
+mongoose.connect(MONGOD_URI, {useNewUrlParser: true,useFindAndModify: false});
 
 
 let workoutSeed = [
