@@ -6,12 +6,12 @@ module.exports = function(app) {
 
     mongoose.connect("mongodb://localhost/workout", {useNewUrlParser: true,useFindAndModify: false});
 
-    // app.get('/api/workouts', function (req, res) {
-    //     console.log('get /api/workouts');
-    //     db.Workout.find({})
-    //         .then(workouts => { res.json(workouts) })
-    //         .catch(error => { res.json(error) });
-    // })
+    app.get('/api/workouts', function (req, res) {
+        console.log('get /api/workouts');
+        db.Workout.find({})
+            .then(workouts => { res.json(workouts) })
+            .catch(error => { res.json(error) });
+    })
     app.post('/api/workouts', function (req, res) {
         console.log('post /api/workouts');
         db.Workout.create({
