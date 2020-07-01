@@ -1,6 +1,8 @@
 const db = require('../models');
 const path = require('path');
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 
 module.exports = function(app) {
 

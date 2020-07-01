@@ -1,5 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
+require('dotenv').config();
+
 
 var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/workout";
     
