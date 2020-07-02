@@ -4,7 +4,7 @@ require('dotenv').config();
 
 
 var MONGOD_URI= process.env.MONGODB_URI || "mongodb://localhost/workout";
-    
+    console.log(MONGOD_URI)
 mongoose.connect(MONGOD_URI, {useNewUrlParser: true,useFindAndModify: false});
 
 
